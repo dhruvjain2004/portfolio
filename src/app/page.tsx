@@ -219,7 +219,7 @@ export default function PortfolioPage() {
       content: (
         <div className="space-y-3 text-muted-foreground leading-relaxed">
           <motion.p variants={itemVariants}>
-            Passionate third-year B.Tech Computer Science student with a strong foundation in Generative AI and full
+            Passionate 4th-year B.Tech Computer Science student with a strong foundation in Generative AI and full
             stack development. Skilled in building scalable, user-focused web applications using Langchain, vector db,
             graph db, RAG, TypeScript, Next.js, and Node.js.
           </motion.p>
