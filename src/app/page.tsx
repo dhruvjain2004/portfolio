@@ -77,7 +77,7 @@ const projects: ProjectItem[] = [
   },
   {
     name: "AI RAG Domain Generator using LangChain.js",
-    link: "https://github.com/alkushpipania/ai-rag",
+    link: "https://github.com/Alkush-Pipania/RAG-AI-DOMAIN-GENERATOR",
     description: [
       "Developed a tool to generate domain name suggestions based on detailed business prompts.",
       "Utilized RAG PDF for vector search to optimize domain name suggestions.",
@@ -437,14 +437,14 @@ export default function PortfolioPage() {
                 { href: "https://github.com/Alkush-Pipania", icon: <GithubIcon size={16} />, text: "Alkush-Pipania" },
               ].map((item, idx) => (
                 <motion.div key={idx} variants={itemVariants}>
-                    <a
-                      href={item.href}
-                      target={item.href?.startsWith("mailto:") ? undefined : "_blank"}
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 hover:text-foreground"
-                    >
-                      {item.icon} {item.text}
-                    </a>
+                  <a
+                    href={item.href}
+                    target={item.href?.startsWith("mailto:") ? undefined : "_blank"}
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 hover:text-foreground"
+                  >
+                    {item.icon} {item.text}
+                  </a>
                 </motion.div>
               ))}
             </motion.div>
