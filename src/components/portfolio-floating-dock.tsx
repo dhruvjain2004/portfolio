@@ -18,17 +18,17 @@ export function PortfolioFloatingDock() {
     },
     {
       title: "Resume",
-      href: "https://firebasestorage.googleapis.com/v0/b/resume-builder-2024-3d12f.appspot.com/o/resume%2Falkush.cv%20(1)%20(1).pdf?alt=media&token=2bd3b30b-2295-4c69-92bb-7e003b6e4ad4",
+      href: "https://firebasestorage.googleapis.com/v0/b/resume-builder-2024-3d12f.appspot.com/o/resume%2FResume_Alkush.pdf?alt=media&token=03f9d017-a106-47ed-b5b2-0c6d1a94fee0",
       icon: <FileText {...iconProps} />,
     },
     {
       title: "GitHub",
-      href: "https://github.com/Alkush-Pipania", 
+      href: "https://github.com/Alkush-Pipania",
       icon: <Github {...iconProps} />,
     },
     {
       title: "LinkedIn",
-      href: "https://www.linkedin.com/in/alkush-pipania-49269929b/", 
+      href: "https://www.linkedin.com/in/alkush-pipania-49269929b/",
       icon: <Linkedin {...iconProps} />,
     },
     {
@@ -51,7 +51,7 @@ export function PortfolioFloatingDock() {
   return (
     <FloatingDock
       items={items}
-      // mobileClassName="translate-y-20" // Demo class, remove for production
+    // mobileClassName="translate-y-20" // Demo class, remove for production
     />
   )
 }
