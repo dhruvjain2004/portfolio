@@ -418,7 +418,7 @@ export default function PortfolioPage() {
               Hi, Dhruv here
             </motion.h1>
             <motion.p className="mt-3 text-lg sm:text-xl text-muted-foreground" custom={1} variants={heroTextVariants}>
-              20 year old aspiring software developer
+              20 year old Aspiring Software Developer
             </motion.p>
             <motion.div
               className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground"
@@ -457,7 +457,7 @@ export default function PortfolioPage() {
           </motion.div>
           <motion.div variants={heroImageVariants}>
             <Image
-              src="/profile-mandalorian.png"
+              src="https://cdn.dribbble.com/userupload/14658105/file/original-e1593a134e08140730988768d74d553d.jpg?resize=752x&vertical=center"
               alt="Dhruv Jain's profile picture"
               width={100}
               height={100}
