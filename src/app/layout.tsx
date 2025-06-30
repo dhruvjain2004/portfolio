@@ -4,9 +4,9 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider" // Ensure this path is correct
 
 export const metadata: Metadata = {
-  title: "Alkush Pipania - Portfolio", // Updated title
+  title: "Dhruv Jain - Portfolio",
   description:
-    "Alkush Pipania's personal portfolio showcasing projects and skills in Generative AI and full stack development.", // Updated description
+    "Dhruv Jain's personal portfolio showcasing projects and skills in full-stack development and software engineering.",
   generator: "v0.dev",
 }
 

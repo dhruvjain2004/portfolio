@@ -33,12 +33,13 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Frontend Developer",
-    company: "Makunai Global, Noida",
-    period: "March 2024 - April 2024",
+    role: "Web Development Intern",
+    company: "Learnflow",
+    period: "Aug 2024 - Sept 2024",
     description: [
-      "Developed responsive and user-friendly web interfaces Next.js.",
-      "Collaboration work using git/github.",
+      "Participated in an extended virtual internship program centered on front-end web development.",
+      "Designed and developed responsive web pages using HTML, CSS, and Javascript.",
+      "Improved performance, layout consistency, and UI responsiveness across multiple assigned projects.",
     ],
   },
 ]
@@ -54,80 +55,80 @@ interface ProjectItem {
 
 const projects: ProjectItem[] = [
   {
-    name: "Platform for Save and Share Links - Carter",
-    link: "https://carter.fun",
+    name: "StockTradeX Trading App",
+    link: "https://github.com/dhruvjain2004",
     description: [
-      "AI-Powered Platform to Save and Share Links with Chrome Extension.",
-      "Features include Folders, Links, Secret Keys, Trash, and Auto Folder Selection and Retrieval.",
+      "Developed a full-stack Zerodha Clone using MERN stack with JWT authentication, MongoDB Atlas, and RESTful APIs for secure trading simulation.",
+      "Designed a fully responsive UI using React.js, Material UI, Tailwind CSS, and integrated Font Awesome for enhanced user experience.",
     ],
-    techStack: ["LangChain", "VectorDB", "Gemini", "Next.js", "Node.js"],
-    logo: "🤖", // AI robot emoji
-    alt: "Carter Project Logo",
+    techStack: ["MERN", "Tailwind CSS", "JWT", "Bcrypt", "MongoDB Atlas", "RESTful APIs"],
+    logo: "📈", // Stock chart emoji
+    alt: "StockTradeX Project Logo",
   },
   {
-    name: "Prompt Generation AI - GOOG",
-    link: "https://goog-sage.vercel.app",
+    name: "Crypto-Place Web App",
+    link: "https://github.com/dhruvjain2004",
     description: [
-      "Created an AI tool to generate prompts based on user input with context from past conversations.",
-      "Integrated deep search functionality using Tavily and Deep Think.",
+      "Developed CryptaPlace, a responsive ReactJS web app that fetches real-time crypto data via CoinGecko API.",
+      "Features dynamic search, market analytics and user-friendly UI for global cryptocurrency tracking.",
     ],
-    techStack: ["LangChain.js", "Next.js", "TypeScript", "Shadcn/ui", "Clerk", "Upstash Vector DB", "Gemini"],
-    logo: "🧠", // Brain emoji for AI
-    alt: "GOOG Project Logo",
+    techStack: ["React.js", "Tailwind CSS", "CoinGecko-API"],
+    logo: "₿", // Bitcoin symbol
+    alt: "Crypto-Place Project Logo",
   },
   {
-    name: "AI RAG Domain Generator using LangChain.js",
-    link: "https://github.com/Alkush-Pipania/RAG-AI-DOMAIN-GENERATOR",
+    name: "Chatting Application",
+    link: "https://github.com/dhruvjain2004",
     description: [
-      "Developed a tool to generate domain name suggestions based on detailed business prompts.",
-      "Utilized RAG PDF for vector search to optimize domain name suggestions.",
+      "Built a real-time Chat App using React.js, Node.js and Socket.io enabling instant bi-directional messaging.",
+      "Features responsive UI for seamless communication experience.",
     ],
-    techStack: ["LangChain.js", "Node.js", "Gemini"],
-    logo: "⚡", // Lightning bolt for AI/tech
-    alt: "AI RAG Project Logo",
+    techStack: ["React.js", "Node.js", "Socket.io"],
+    logo: "💬", // Chat bubble emoji
+    alt: "Chat App Project Logo",
   },
   {
-    name: "G1 Website Builder",
-    link: "https://github.com/alkushpipania/G1",
-    description: ["A Website to Make Other (nodejs/nextjs) website.", "Using Webcontainer technology."],
-    techStack: ["Anthropic", "Node.js", "Next.js", "WebContainer"],
-    logo: "🏗️", // Construction/building emoji
-    alt: "G1 Website Builder Logo",
+    name: "Real Time Weather App",
+    link: "https://github.com/dhruvjain2004",
+    description: [
+      "Developed a responsive Weather App using React.js and Tailwind CSS that fetches live weather data from public APIs.",
+      "Provides real-time weather information with user-friendly interface.",
+    ],
+    techStack: ["React.js", "Tailwind CSS", "WeatherAPI"],
+    logo: "🌤️", // Weather emoji
+    alt: "Weather App Project Logo",
   },
 ]
 
 const allSkills: string[] = [
-  "JavaScript",
-  "TypeScript",
-  "HTML5",
-  "CSS3",
-  "C++",
   "Python",
-  "React",
-  "Next.js",
+  "C",
+  "Java",
+  "HTML",
+  "CSS",
+  "JavaScript",
   "Node.js",
-  "Hono",
-  "Express",
-  "MemoryVectorStore",
-  "Vite",
-  "NextAuth",
-  "LangChain.js",
-  "Hugging Face",
-  "Gemini",
-  "Anthropic",
-  "Prisma",
-  "Drizzle",
-  "VectorDB",
-  "Upstash Vector DB",
-  "WebSockets",
-  "WebRTC",
-  "Docker",
-  "Turbo-Repo",
+  "React.js",
+  "Express.js",
+  "Tailwind CSS",
+  "Bootstrap",
+  "MySQL",
+  "MongoDB",
+  "JWT",
+  "Bcrypt",
   "Git",
   "GitHub",
-  "Shadcn/ui",
-  "Clerk",
-  "WebContainer",
+  "VS Code",
+  "Intelli-J",
+  "Postman",
+  "Redux DevTools",
+  "Render",
+  "Vercel",
+  "RESTful APIs",
+  "DSA",
+  "OOP",
+  "DBMS",
+  "GenAI",
 ]
 
 // Animation Variants
@@ -219,12 +220,12 @@ export default function PortfolioPage() {
       content: (
         <div className="space-y-3 text-muted-foreground leading-relaxed">
           <motion.p variants={itemVariants}>
-            Passionate 4th-year B.Tech Computer Science student with a strong foundation in Generative AI and full
-            stack development. Skilled in building scalable, user-focused web applications using Langchain, vector db,
-            graph db, RAG, TypeScript, Next.js, and Node.js.
+            Aspiring software developer with hands-on experience in full-stack development, strong DSA foundation and a
+            track record of building real-world projects that solve practical problems with internship experience.
           </motion.p>
           <motion.p variants={itemVariants}>
-            Dedicated to solving complex problems and continuously learning to deliver innovative, efficient solutions.
+            Seeking a role to build scalable solutions and grow with a forward-thinking tech team. Skilled in MERN stack,
+            React.js, Node.js, and various modern web technologies.
           </motion.p>
         </div>
       ),
@@ -339,10 +340,10 @@ export default function PortfolioPage() {
             <GraduationCap size={20} className="text-muted-foreground" />
           </div>
           <div className="flex-1">
-            <h3 className="font-semibold text-foreground">Raj Kumar Goel Institute of Technology</h3>
-            <p className="text-sm text-muted-foreground">B.Tech in Computer Science</p>
-            <p className="text-xs text-muted-foreground">Sept 2022 - Oct 2026 (Currently in 6th Semester)</p>
-            <p className="text-xs text-muted-foreground mt-1">CGPA: 7+</p>
+            <h3 className="font-semibold text-foreground">Raj Kumar Goel Institute of Technology, AKTU</h3>
+            <p className="text-sm text-muted-foreground">B.Tech in Computer Science Engineering specialization in (AI/ML)</p>
+            <p className="text-xs text-muted-foreground">Sept 2022 - June 2026</p>
+            <p className="text-xs text-muted-foreground mt-1">GPA: 8.05</p>
           </div>
         </motion.div>
       ),
@@ -414,10 +415,10 @@ export default function PortfolioPage() {
               custom={0}
               variants={heroTextVariants}
             >
-              Hi, Alkush here
+              Hi, Dhruv here
             </motion.h1>
             <motion.p className="mt-3 text-lg sm:text-xl text-muted-foreground" custom={1} variants={heroTextVariants}>
-              19 year old something guy
+              20 year old aspiring software developer
             </motion.p>
             <motion.div
               className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground"
@@ -425,16 +426,21 @@ export default function PortfolioPage() {
             >
               {[
                 {
-                  href: "mailto:workofalkushpipania@gmail.com",
+                  href: "mailto:dhruvjain527@gmail.com",
                   icon: <Mail size={16} />,
-                  text: "workofalkushpipania@gmail.com",
+                  text: "dhruvjain527@gmail.com",
                 },
                 {
-                  href: "https://linkedin.com/in/alkushpipania",
-                  icon: <LinkedinIcon size={16} />,
-                  text: "alkushpipania",
+                  href: "tel:+918860048684",
+                  icon: <Phone size={16} />,
+                  text: "+91 8860048684",
                 },
-                { href: "https://github.com/Alkush-Pipania", icon: <GithubIcon size={16} />, text: "Alkush-Pipania" },
+                {
+                  href: "https://linkedin.com/in/dhruv-jain-877543223",
+                  icon: <LinkedinIcon size={16} />,
+                  text: "dhruv-jain-877543223",
+                },
+                { href: "https://github.com/dhruvjain2004", icon: <GithubIcon size={16} />, text: "dhruvjain2004" },
               ].map((item, idx) => (
                 <motion.div key={idx} variants={itemVariants}>
                   <a
@@ -452,7 +458,7 @@ export default function PortfolioPage() {
           <motion.div variants={heroImageVariants}>
             <Image
               src="/profile-mandalorian.png"
-              alt="Alkush Pipania's profile picture - Mandalorian helmet"
+              alt="Dhruv Jain's profile picture"
               width={100}
               height={100}
               className="rounded-full object-cover w-24 h-24 sm:w-28 sm:h-28 shrink-0 mt-4 sm:mt-0"
@@ -477,7 +483,7 @@ export default function PortfolioPage() {
             variants={itemVariants}
           ></motion.div>
           <motion.p className="text-sm text-muted-foreground" variants={itemVariants}>
-            &copy; {new Date().getFullYear()} Alkush Pipania. All rights reserved.
+            &copy; {new Date().getFullYear()} Dhruv Jain. All rights reserved.
           </motion.p>
         </motion.footer>
       </motion.main>
