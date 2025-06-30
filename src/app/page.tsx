@@ -288,7 +288,8 @@ export default function PortfolioPage() {
                 {project.logo ? (
                   project.logo.startsWith("http") ? (
                     <Image
-                      src={project.logo}
+                      //src={project.logo}
+                      src="https://cdn.dribbble.com/userupload/14658105/file/original-e1593a134e08140730988768d74d553d.jpg?resize=1200x"
                       alt={project.alt || project.name}
                       width={32}
                       height={32}
@@ -461,7 +462,7 @@ export default function PortfolioPage() {
               alt="Dhruv Jain's profile picture"
               width={100}
               height={100}
-              className="rounded-full object-cover w-24 h-24 sm:w-28 sm:h-28 shrink-0 mt-4 sm:mt-0"
+              className="rounded-full object-cover w-24 h-25 sm:w-28 sm:h-28 shrink-0 mt-4 sm:mt-0"
               priority
             />
           </motion.div>
