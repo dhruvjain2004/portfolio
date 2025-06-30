@@ -18,7 +18,7 @@ export function PortfolioFloatingDock() {
     },
     {
       title: "Resume",
-      href: "https://drive.google.com/file/d/12Ozh_Nj7iy9kKCi4UVlWeZRD-BgoRIeN/view?usp=drive_link",
+      href: "/resume",
       icon: <FileText {...iconProps} />,
     },
     {
