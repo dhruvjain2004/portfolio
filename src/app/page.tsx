@@ -55,6 +55,16 @@ interface ProjectItem {
 
 const projects: ProjectItem[] = [
   {
+    name: "NaukriVerse Job Portal App",
+    link: "https://github.com/dhruvjain2004/NaukriVerse",
+    description: [
+      "◦ Developing a full-stack job portal where recruiters post jobs and users apply, manage profiles, and track applications.◦ Implemented JWT-based authentication with role-based access control for recruiters and job seekers.◦ Integrated Cloudinary for secure upload and management of resumes, company logos, and media assets.◦ Designed a responsive UI using ShadCN UI and Tailwind CSS; backend built with scalable REST APIs and MongoDB.",
+    ],
+    techStack: ["MERN", "Tailwind CSS", "JWT", "Bcrypt", "MongoDB Atlas", "RESTful APIs","ShadCN-UI", "Cloudinary"],
+    /*logo: "📈", // Stock chart emoji
+    alt: "StockTradeX Project Logo"*/
+  },
+  {
     name: "StockTradeX Trading App",
     link: "https://github.com/dhruvjain2004",
     description: [
