@@ -41,9 +41,11 @@ export default function ResumePage() {
             Software Developer & Full Stack Engineer
           </p>
           <div className="flex justify-center space-x-4">
-            <Button variant="outline" size="sm" onClick={handleContact}>
-              <Mail className="mr-2 h-4 w-4" />
-              Contact Me
+            <Button variant="outline" size="sm" asChild>
+              <a href="mailto:dhruvjain527@gmail.com">
+                <Mail className="mr-2 h-4 w-4" />
+                Contact Me
+              </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
               <a href="https://www.linkedin.com/in/dhruv-jain-877543223/" target="_blank" rel="noopener noreferrer">

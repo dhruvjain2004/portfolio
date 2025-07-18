@@ -17,14 +17,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/original-e1593a134e08140730988768d74d553d.webp" /> {/* Change to /logo.png if you want */}
+      </head>
       <body
-       suppressHydrationWarning
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem={true} // Can be true or false, ensure consistency
-          disableTransitionOnChange={false} // Usually false is fine
+          enableSystem={true}
+          disableTransitionOnChange={false}
         >
           {children}
         </ThemeProvider>
