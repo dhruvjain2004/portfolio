@@ -58,11 +58,15 @@ const projects: ProjectItem[] = [
     name: "NaukriVerse Job Portal App",
     link: "https://github.com/dhruvjain2004/NaukriVerse",
     description: [
-      "◦ Developing a full-stack job portal where recruiters post jobs and users apply, manage profiles, and track applications.◦ Implemented JWT-based authentication with role-based access control for recruiters and job seekers.◦ Integrated Cloudinary for secure upload and management of resumes, company logos, and media assets.◦ Designed a responsive UI using ShadCN UI and Tailwind CSS; backend built with scalable REST APIs and MongoDB.",
+      "◦ Developing a full-stack job portal where recruiters post jobs and users apply, manage profiles, and track applications.",
+      "◦ Implemented JWT-based authentication with role-based access control for recruiters and job seekers.",
+      "◦ Integrated Cloudinary for secure upload and management of resumes, company logos, and media assets.",
+      "◦ Designed a responsive UI using ShadCN UI and Tailwind CSS; backend built with scalable REST APIs and MongoDB.",
     ],
-    techStack: ["MERN", "Tailwind CSS", "JWT", "Bcrypt", "MongoDB Atlas", "RESTful APIs","ShadCN-UI", "Cloudinary"],
-    /*logo: "📈", // Stock chart emoji
-    alt: "StockTradeX Project Logo"*/
+    techStack: ["MERN", "Tailwind CSS", "JWT", "Bcrypt", "MongoDB Atlas", "RESTful APIs", "ShadCN-UI", "Cloudinary"],
+    // logo and alt can be added if desired
+    logo: "💼", // Briefcase emoji
+    alt: "NaukriVerse Project Logo",
   },
   {
     name: "StockTradeX Trading App",
@@ -96,17 +100,6 @@ const projects: ProjectItem[] = [
     techStack: ["React.js", "Node.js", "Socket.io"],
     logo: "💬", // Chat bubble emoji
     alt: "Chat App Project Logo",
-  },
-  {
-    name: "Real Time Weather App",
-    link: "https://github.com/dhruvjain2004",
-    description: [
-      "Developed a responsive Weather App using React.js and Tailwind CSS that fetches live weather data from public APIs.",
-      "Provides real-time weather information with user-friendly interface.",
-    ],
-    techStack: ["React.js", "Tailwind CSS", "WeatherAPI"],
-    logo: "🌤️", // Weather emoji
-    alt: "Weather App Project Logo",
   },
 ]
 
@@ -464,6 +457,17 @@ export default function PortfolioPage() {
                   </a>
                 </motion.div>
               ))}
+              <motion.div variants={itemVariants}>
+                <a
+                  href="/public/Dhruv Jain Resume CV Latest.pdf" // <-- Update this path if your resume filename or location changes
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 hover:text-foreground font-semibold"
+                >
+                  {/* You can use an icon here if you want */}
+                  View Resume
+                </a>
+              </motion.div>
             </motion.div>
           </motion.div>
           <motion.div variants={heroImageVariants}>

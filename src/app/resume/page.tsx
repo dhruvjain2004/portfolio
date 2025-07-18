@@ -13,6 +13,24 @@ export default function ResumePage() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
+          {/* Resume Download Button */}
+          <div className="mb-4 flex justify-center">
+            {/* <Button
+              asChild
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+              size="lg"
+            >
+              <a
+                href="/Dhruv Jain Resume CV Latest.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                <FileText className="mr-2 h-5 w-5" />
+                Download My Latest Resume (PDF)
+              </a>
+            </Button> */}
+          </div>
           <div className="mx-auto h-16 w-16 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 mb-4">
             <FileText className="h-8 w-8 text-blue-600 dark:text-blue-400" />
           </div>
@@ -50,7 +68,7 @@ export default function ResumePage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Contact Information</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-600 dark:text-gray-400">
                 <p>📧 dhruvjain527@gmail.com</p>
-                <p>📱 +91 98765 43210</p>
+                <p>📱 +91 8860048684</p>
                 <p>📍 Delhi, India</p>
                 <p>🌐 dhruvjain2004.github.io</p>
               </div>
@@ -60,9 +78,7 @@ export default function ResumePage() {
             <div className="border-b border-gray-200 dark:border-gray-700 pb-4">
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Professional Summary</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Passionate Full Stack Developer with expertise in modern web technologies including React, Next.js, 
-                Node.js, and TypeScript. Experienced in building scalable applications with a focus on user experience 
-                and performance. Strong problem-solving skills and ability to work in collaborative environments.
+                Aspiring software developer with hands-on experience in full-stack development, a strong foundation in Data Structures and Algorithms (DSA), and a proven record of building real-world projects. Seeking a role where I can contribute to scalable software solutions and grow with a forward-thinking tech team. Strong problem-solving skills and ability to work in collaborative environments.
               </p>
             </div>
 
@@ -73,8 +89,8 @@ export default function ResumePage() {
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-white mb-2">Frontend</h3>
                   <ul className="text-gray-600 dark:text-gray-400 space-y-1">
-                    <li>• React.js & Next.js</li>
-                    <li>• TypeScript</li>
+                    <li>• React.js</li>
+                    <li>• JavaScript</li>
                     <li>• Tailwind CSS</li>
                     <li>• HTML5 & CSS3</li>
                   </ul>
@@ -85,14 +101,14 @@ export default function ResumePage() {
                     <li>• Node.js</li>
                     <li>• Express.js</li>
                     <li>• MongoDB</li>
-                    <li>• PostgreSQL</li>
+                    <li>• MySQL</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-white mb-2">Tools & Others</h3>
                   <ul className="text-gray-600 dark:text-gray-400 space-y-1">
                     <li>• Git & GitHub</li>
-                    <li>• Docker</li>
+                    <li>• Render</li>
                     <li>• AWS</li>
                     <li>• Vercel</li>
                   </ul>
@@ -105,21 +121,12 @@ export default function ResumePage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Work Experience</h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">Full Stack Developer</h3>
-                  <p className="text-blue-600 dark:text-blue-400">Tech Company • 2023 - Present</p>
+                  <h3 className="font-medium text-gray-900 dark:text-white">Web Developer</h3>
+                  <p className="text-blue-600 dark:text-blue-400">Tech Company • May 2024 - June 2024</p>
                   <ul className="text-gray-600 dark:text-gray-400 mt-2 space-y-1">
-                    <li>• Developed and maintained web applications using React and Node.js</li>
+                    <li>• Developed and maintained web applications using HTML,CSS and Javascript</li>
                     <li>• Collaborated with cross-functional teams to deliver high-quality products</li>
                     <li>• Implemented responsive design and optimized application performance</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">Frontend Developer Intern</h3>
-                  <p className="text-blue-600 dark:text-blue-400">Startup • 2022 - 2023</p>
-                  <ul className="text-gray-600 dark:text-gray-400 mt-2 space-y-1">
-                    <li>• Built user interfaces using React and modern CSS frameworks</li>
-                    <li>• Worked on bug fixes and feature implementations</li>
-                    <li>• Participated in code reviews and team meetings</li>
                   </ul>
                 </div>
               </div>
@@ -130,8 +137,8 @@ export default function ResumePage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Education</h2>
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-white">Bachelor of Technology in Computer Science</h3>
-                <p className="text-blue-600 dark:text-blue-400">University Name • 2019 - 2023</p>
-                <p className="text-gray-600 dark:text-gray-400">GPA: 8.5/10</p>
+                <p className="text-blue-600 dark:text-blue-400">Raj Kumar Goel Institute of Technology , AKTU • 2022 - 2026</p>
+                <p className="text-gray-600 dark:text-gray-400">GPA: 8.05/10</p>
               </div>
             </div>
 
@@ -140,17 +147,17 @@ export default function ResumePage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Key Projects</h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">E-Commerce Platform</h3>
+                  <h3 className="font-medium text-gray-900 dark:text-white">NaukriVerse - A Job Portal App</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Built a full-stack e-commerce application using Next.js, Node.js, and MongoDB. 
-                    Features include user authentication, product management, and payment integration.
+                    Built a full-stack job portal application using React.js, Node.js, Express.js and MongoDB. 
+                    Features include user authentication, job listings, and application management.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">Portfolio Website</h3>
+                  <h3 className="font-medium text-gray-900 dark:text-white">StockTradeX - Trading App</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Developed a modern portfolio website using Next.js, TypeScript, and Tailwind CSS. 
-                    Includes dark mode, responsive design, and smooth animations.
+                    Developed a modern trading application using React.js, Node.js, Express.js , MongoDB and Tailwind CSS. 
+                    Includes real-time stock data, user authentication, and interactive charts.
                   </p>
                 </div>
               </div>
@@ -176,4 +183,4 @@ export default function ResumePage() {
       </div>
     </div>
   )
-} 
+}
