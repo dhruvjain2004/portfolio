@@ -243,6 +243,8 @@ const languages = [
   { code: "hi", label: "हिन्दी" },
 ]
 
+type LangType = "en" | "hi";
+
 // Certifications data
 const certifications = [
   {
@@ -305,7 +307,7 @@ const techChart = [
 export default function PortfolioPage() {
   const [email, setEmail] = useState("")
   const [selectedTech, setSelectedTech] = useState<string | null>(null)
-  const [lang, setLang] = useState("en")
+  const [lang, setLang] = useState<LangType>("en")
 
   const handleNewsletterSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -321,7 +323,20 @@ export default function PortfolioPage() {
     : projects
 
   // Language dictionary (simple demo)
-  const dict = {
+  const dict: Record<LangType, {
+    about: string;
+    experience: string;
+    projects: string;
+    education: string;
+    skills: string;
+    newsletter: string;
+    testimonials: string;
+    blog: string;
+    filterBy: string;
+    all: string;
+    subscribe: string;
+    viewResume: string;
+  }> = {
     en: {
       about: "About Me",
       experience: "Experience",
@@ -769,7 +784,7 @@ export default function PortfolioPage() {
       <div className="fixed top-4 right-4 z-50">
         <select
           value={lang}
-          onChange={(e) => setLang(e.target.value)}
+          onChange={(e) => setLang(e.target.value as LangType)}
           className="border border-border rounded px-2 py-1 bg-background text-foreground"
         >
           {languages.map((l) => (
