@@ -22,7 +22,7 @@ import { PortfolioFloatingDock } from "@/components/portfolio-floating-dock"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { motion, Variants } from "framer-motion"
-import { useState, FormEvent } from "react"
+import { useState, FormEvent, JSX } from "react"
 
 interface ExperienceItem {
   role: string
@@ -134,6 +134,38 @@ const allSkills: string[] = [
   "DBMS",
   "GenAI",
 ]
+
+// Optionally, define some icons/colors for popular skills
+const skillIcons: Record<string, JSX.Element> = {
+  "Python": <span className="text-yellow-500">🐍</span>,
+  "C": <span className="text-blue-500">💻</span>,
+  "Java": <span className="text-orange-600">☕</span>,
+  "HTML": <span className="text-orange-500">🔤</span>,
+  "CSS": <span className="text-blue-400">🎨</span>,
+  "JavaScript": <span className="text-yellow-400">🟨</span>,
+  "Node.js": <span className="text-green-600">🌳</span>,
+  "React.js": <span className="text-cyan-400">⚛️</span>,
+  "Express.js": <span className="text-gray-700">🚂</span>,
+  "Tailwind CSS": <span className="text-sky-400">🌬️</span>,
+  "Bootstrap": <span className="text-purple-600">🅱️</span>,
+  "MySQL": <span className="text-blue-700">🐬</span>,
+  "MongoDB": <span className="text-green-700">🍃</span>,
+  "JWT": <span className="text-pink-500">🔑</span>,
+  "Bcrypt": <span className="text-gray-500">🔒</span>,
+  "Git": <span className="text-orange-700">🔗</span>,
+  "GitHub": <span className="text-black">🐙</span>,
+  "VS Code": <span className="text-blue-500">📝</span>,
+  "Intelli-J": <span className="text-pink-700">💡</span>,
+  "Postman": <span className="text-orange-500">📮</span>,
+  "Redux DevTools": <span className="text-purple-500">🛠️</span>,
+  "Render": <span className="text-blue-400">🚀</span>,
+  "Vercel": <span className="text-black">▲</span>,
+  "RESTful APIs": <span className="text-green-500">🔗</span>,
+  "DSA": <span className="text-indigo-500">📊</span>,
+  "OOP": <span className="text-pink-400">🧩</span>,
+  "DBMS": <span className="text-blue-600">🗄️</span>,
+  "GenAI": <span className="text-fuchsia-500">🤖</span>,
+}
 
 // Animation Variants
 const sectionVariants: Variants = {
@@ -538,21 +570,21 @@ export default function PortfolioPage() {
       title: dict[lang].skills,
       icon: <Code size={24} />,
       content: (
-        <motion.div className="space-y-4" variants={badgeContainerVariants}>
-          {allSkills.map((skill, idx) => (
-            <motion.div key={skill} variants={badgeVariants} className="flex items-center gap-3">
-              <span className="w-28 text-xs sm:text-sm font-medium">{skill}</span>
-              <div className="flex-1 bg-muted rounded h-3 relative overflow-hidden">
-                <motion.div
-                  className="bg-primary h-3 rounded"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${60 + (idx % 5) * 8}%` }}
-                  transition={{ duration: 0.7, delay: idx * 0.03 }}
-                />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {allSkills.map((skill) => (
+            <div
+              key={skill}
+              className="flex flex-col items-center justify-center bg-muted rounded-lg p-4 shadow hover:shadow-lg transition group"
+            >
+              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
+                {skillIcons[skill] ?? <span className="text-gray-400">🔹</span>}
               </div>
-            </motion.div>
+              <span className="text-xs sm:text-sm font-semibold text-center group-hover:text-primary transition-colors">
+                {skill}
+              </span>
+            </div>
           ))}
-        </motion.div>
+        </div>
       ),
     },
     {
@@ -665,19 +697,25 @@ export default function PortfolioPage() {
       title: "Tech Stack Chart",
       icon: <Code size={24} />,
       content: (
-        <div className="space-y-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {techChart.map((t) => (
-            <div key={t.name}>
-              <div className="flex justify-between text-xs">
-                <span>{t.name}</span>
-                <span>{t.level}%</span>
+            <div
+              key={t.name}
+              className="flex flex-col items-center bg-muted rounded-lg p-4 shadow hover:shadow-lg transition group"
+            >
+              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
+                {skillIcons[t.name] ?? <span className="text-gray-400">🔹</span>}
               </div>
-              <div className="w-full bg-muted rounded h-3 relative overflow-hidden">
+              <span className="font-semibold text-center mb-2 group-hover:text-primary transition-colors">
+                {t.name}
+              </span>
+              <div className="w-full bg-border rounded h-3 relative overflow-hidden mb-1">
                 <div
-                  className="bg-primary h-3 rounded"
-                  style={{ width: `${t.level}%`, transition: "width 1s" }}
+                  className="bg-primary h-3 rounded transition-all"
+                  style={{ width: `${t.level}%` }}
                 />
               </div>
+              <span className="text-xs text-muted-foreground">{t.level}% proficiency</span>
             </div>
           ))}
         </div>
