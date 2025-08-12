@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider" // Ensure this path is correct
+import Head from "next/head"
 
 export const metadata: Metadata = {
   title: "Dhruv Jain - Portfolio",
@@ -29,6 +30,15 @@ export default function RootLayout({
           enableSystem={true}
           disableTransitionOnChange={false}
         >
+          <Head>
+            <title>Dhruv Jain Portfolio</title>
+            <meta name="description" content="Dhruv Jain - Aspiring Software Developer Portfolio" />
+            <meta property="og:title" content="Dhruv Jain Portfolio" />
+            <meta property="og:description" content="Aspiring Software Developer Portfolio" />
+            <meta property="og:image" content="https://cdn.dribbble.com/userupload/14658105/file/original-e1593a134e08140730988768d74d553d.jpg?resize=752x&vertical=center" />
+            <meta property="og:type" content="website" />
+            <meta name="twitter:card" content="summary_large_image" />
+          </Head>
           {children}
         </ThemeProvider>
       </body>
