@@ -261,20 +261,6 @@ const certifications = [
   },
 ]
 
-// Open Source Contributions
-const contributions = [
-  {
-    project: "OpenAI GPT-3 Playground",
-    desc: "Contributed bug fixes and documentation improvements.",
-    link: "https://github.com/openai/openai-quickstart-node", // <-- Replace with your actual PR or repo link if needed
-  },
-  {
-    project: "React Awesome Components",
-    desc: "Added new UI components and improved accessibility.",
-    link: "#", // <-- Replace '#' with your actual contribution link
-  },
-]
-
 // Hobbies & Interests
 const hobbies = [
   "Playing Chess",
@@ -570,23 +556,6 @@ export default function PortfolioPage() {
       ),
     },
     {
-      id: "testimonials",
-      title: dict[lang].testimonials,
-      icon: <Lightbulb size={24} />,
-      content: (
-        <div className="grid gap-6 sm:grid-cols-2">
-          {testimonials.map((t) => (
-            <div key={t.name} className="border border-border rounded-lg p-4 bg-card flex flex-col items-center text-center">
-              <Image src={t.avatar} alt={t.name} width={48} height={48} className="rounded-full mb-2" unoptimized />
-              <p className="text-sm text-muted-foreground mb-2">"{t.text}"</p>
-              <span className="font-semibold">{t.name}</span>
-              <span className="text-xs text-muted-foreground">{t.role}</span>
-            </div>
-          ))}
-        </div>
-      ),
-    },
-    {
       id: "newsletter",
       title: dict[lang].newsletter,
       icon: <Send size={24} />,
@@ -613,27 +582,6 @@ export default function PortfolioPage() {
             </Button>
           </motion.form>
         </>
-      ),
-    },
-    {
-      id: "video",
-      title: "Video Introduction",
-      icon: <Lightbulb size={24} />,
-      content: (
-        <div className="flex flex-col items-center">
-          <div className="w-full aspect-video max-w-xl rounded-lg overflow-hidden border border-border mb-4">
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Dhruv Jain Introduction"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <p className="text-muted-foreground text-center">A short video about me and my journey.</p>
-        </div>
       ),
     },
     {
@@ -664,23 +612,6 @@ export default function PortfolioPage() {
             <li key={a.title} className="flex flex-col">
               <span className="font-semibold">{a.title} <span className="text-xs text-muted-foreground">({a.year})</span></span>
               <span className="text-sm text-muted-foreground">{a.desc}</span>
-            </li>
-          ))}
-        </ul>
-      ),
-    },
-    {
-      id: "opensource",
-      title: "Open Source Contributions",
-      icon: <GithubIcon size={24} />,
-      content: (
-        <ul className="space-y-3">
-          {contributions.map((c) => (
-            <li key={c.project}>
-              <a href={c.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">
-                {c.project}
-              </a>
-              <span className="block text-sm text-muted-foreground">{c.desc}</span>
             </li>
           ))}
         </ul>
@@ -730,17 +661,6 @@ export default function PortfolioPage() {
       ),
     },
     {
-      id: "map",
-      title: "Interactive Map",
-      icon: <Lightbulb size={24} />,
-      content: (
-        <div className="w-full h-64 bg-muted flex items-center justify-center rounded">
-          <span className="text-muted-foreground">[Map Placeholder: Add Google Maps or similar here]</span>
-          {/* <-- Replace this span with an actual map embed if desired */}
-        </div>
-      ),
-    },
-    {
       id: "techchart",
       title: "Tech Stack Chart",
       icon: <Code size={24} />,
@@ -763,43 +683,16 @@ export default function PortfolioPage() {
         </div>
       ),
     },
-    {
-      id: "contactquick",
-      title: "Quick Contact",
-      icon: <Send size={24} />,
-      content: (
-        <div className="flex gap-4">
-          <a
-            href="https://wa.me/918860048684"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-          >
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 32 32"><path d="M16.001 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.6 4.46 1.74 6.38l-1.84 6.74 6.92-1.81c1.85 1.01 3.94 1.55 6.08 1.55h.01c7.06 0 12.8-5.74 12.8-12.8s-5.74-12.8-12.8-12.8zm6.97 19.77c-.29.82-1.7 1.61-2.34 1.71-.6.09-1.36.13-2.19-.14-.51-.16-1.17-.38-2.02-.75-3.56-1.54-5.89-5.34-6.07-5.6-.18-.26-1.45-1.93-1.45-3.68 0-1.75.92-2.61 1.25-2.97.33-.36.72-.45.96-.45.24 0 .48.01.69.01.22 0 .52-.08.82.62.29.7.99 2.41 1.08 2.59.09.18.15.4.03.65-.12.25-.18.4-.36.62-.18.22-.38.49-.54.66-.18.18-.37.38-.16.74.22.36.97 1.6 2.09 2.59 1.44 1.29 2.65 1.7 3.01 1.89.36.19.57.16.78-.1.21-.26.9-1.05 1.14-1.41.24-.36.48-.3.8-.18.33.12 2.09.99 2.45 1.17.36.18.6.27.69.42.09.15.09.86-.2 1.68z"/></svg>
-            WhatsApp
-          </a>
-          <a
-            href="https://t.me/yourtelegramusername" // <-- Replace 'yourtelegramusername' with your actual Telegram username
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 32 32"><path d="M29.92 6.62c-.34-.28-.82-.34-1.22-.16l-25.6 10.67c-.42.18-.7.6-.7 1.06.01.46.31.86.74 1.01l6.7 2.23 2.6 7.8c.15.45.57.76 1.04.76.02 0 .04 0 .06-.01.48-.03.89-.37 1-0.84l2.13-8.44 7.17 6.54c.2.18.46.28.72.28.13 0 .26-.03.38-.09.37-.17.6-.56.54-.97l-2.13-15.2c-.06-.41-.37-.74-.78-.84zm-3.7 13.13l-6.13-5.6c-.22-.2-.54-.23-.78-.07-.24.16-.34.47-.24.74l2.13 8.44-1.7-5.1c-.09-.27-.34-.45-.62-.45-.09 0-.18.02-.26.06l-7.17 3.01 21.77-9.07-2.13 15.2z"/></svg>
-            Telegram
-          </a>
-        </div>
-      ),
-    },
   ]
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-background via-muted to-background text-foreground transition-colors duration-300">
       {/* Language Switcher */}
       <div className="fixed top-4 right-4 z-50">
         <select
           value={lang}
           onChange={(e) => setLang(e.target.value as LangType)}
-          className="border border-border rounded px-2 py-1 bg-background text-foreground"
+          className="border border-border rounded px-2 py-1 bg-background text-foreground shadow-md focus:ring-2 focus:ring-primary"
         >
           {languages.map((l) => (
             <option key={l.code} value={l.code}>
@@ -817,7 +710,7 @@ export default function PortfolioPage() {
         {/* Hero Section */}
         <motion.section
           id="home"
-          className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-12"
+          className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-12 bg-card/80 rounded-xl shadow-lg p-8 border border-border"
           variants={sectionVariants}
         >
           <motion.div variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -891,11 +784,24 @@ export default function PortfolioPage() {
 
         {/* Render sections based on the pageSections array order */}
         {pageSections.map((section) => (
-          <motion.section key={section.id} id={section.id} variants={sectionVariants}>
-            <motion.h2 className="section-title inline-flex items-center gap-2" variants={itemVariants}>
-              {section.icon} {section.title}
-            </motion.h2>
-            {section.content}
+          <motion.section
+            key={section.id}
+            id={section.id}
+            variants={sectionVariants}
+            className="mb-8"
+          >
+            <motion.div
+              className="flex items-center gap-2 mb-4"
+              variants={itemVariants}
+            >
+              <div className="w-1.5 h-8 bg-primary rounded-r-lg mr-2" />
+              <h2 className="section-title text-2xl font-bold tracking-tight inline-flex items-center gap-2 text-primary">
+                {section.icon} {section.title}
+              </h2>
+            </motion.div>
+            <div className="bg-card/80 border border-border rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+              {section.content}
+            </div>
           </motion.section>
         ))}
 
