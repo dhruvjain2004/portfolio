@@ -304,6 +304,20 @@ const techChart = [
   { name: "Tailwind CSS", level: 70 },
 ]
 
+// Add this awards array:
+const awards = [
+  {
+    title: "Winner - College Hackathon",
+    year: "2023",
+    desc: "Built a smart attendance system using face recognition.",
+  },
+  {
+    title: "Top 10 - CodeFest",
+    year: "2022",
+    desc: "Ranked among top 10 in a national coding competition.",
+  },
+]
+
 export default function PortfolioPage() {
   const [email, setEmail] = useState("")
   const [selectedTech, setSelectedTech] = useState<string | null>(null)
