@@ -79,6 +79,25 @@ const projects: ProjectItem[] = [
     alt: "NaukriVerse Project Logo",
   },
   {
+    name: "LangifyAI – AI Translation Platform",
+    link: "https://github.com/dhruvjain2004", // GitHub / Live Link
+    description: [
+      "Built LangifyAI, a multilingual AI-powered translation platform supporting Spanish, Hindi, and French with scalability for additional languages.",
+      "Implemented a resilient server-side translation pipeline using multiple public APIs with Generative AI fallback to ensure fast and reliable translations.",
+      "Integrated Clerk authentication for secure user login and registration.",
+      "Designed a responsive UI using Next.js and Tailwind CSS featuring voice input, dark mode, and optimized Hindi (Devanagari) font rendering.",
+    ],
+    techStack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Generative AI",
+      "Web Speech API",
+      "Clerk Auth",
+    ],
+    logo: "🌐",
+    alt: "LangifyAI Translation Platform",
+  },
+  {
     name: "StockTradeX Trading App",
     link: "https://github.com/dhruvjain2004",
     description: [
@@ -114,35 +133,65 @@ const projects: ProjectItem[] = [
 ]
 
 const allSkills: string[] = [
-  "Python",
-  "C",
+  // Languages
   "Java",
+  "JavaScript",
+  "Python",
+  "SQL",
+  "C",
+
+  // Frontend
   "HTML",
   "CSS",
-  "JavaScript",
-  "Node.js",
   "React.js",
-  "Express.js",
+  "Next.js",
   "Tailwind CSS",
   "Bootstrap",
-  "MySQL",
-  "MongoDB",
+
+  // Backend
+  "Node.js",
+  "Express.js",
+  "RESTful APIs",
   "JWT",
   "Bcrypt",
+
+  // Databases & Cloud
+  "MongoDB",
+  "MySQL",
+  "PostgreSQL",
+  "Neon (PostgreSQL)",
+
+  // Developer Tools
   "Git",
   "GitHub",
   "VS Code",
-  "Intelli-J",
+  "IntelliJ IDEA",
   "Postman",
   "Redux DevTools",
-  "Render",
+
+  // Deployment & Platforms
   "Vercel",
-  "RESTful APIs",
-  "DSA",
-  "OOP",
+  "Render",
+  "Deployment",
+
+  // Core CS Concepts
+  "Data Structures & Algorithms",
+  "Object-Oriented Programming",
   "DBMS",
-  "GenAI",
+  "Operating Systems",
+  "AIML",
+
+  // AI & GenAI Tools
+  "Generative AI",
+  "OpenAI API",
+  "GitHub Copilot",
+  "Cursor AI",
+  "ChatGPT",
+  "Gemini",
+  "Replit",
+  "Windsurf",
 ]
+
 
 // Animation Variants
 const sectionVariants: Variants = {
@@ -356,7 +405,7 @@ continuing to learn, innovate and grow in a collaborative environment.
             <p className="text-sm text-muted-foreground">Raj Kumar Goel Institute Of Technology Ghaziabad, India</p>
             <p className="text-sm text-muted-foreground">B.Tech in Computer Science Engineering specialization in (AIML)</p>
             <p className="text-xs text-muted-foreground">Sept 2022 - June 2026</p>
-            <p className="text-xs text-muted-foreground mt-1">GPA: 8.1</p>
+            <p className="text-xs text-muted-foreground mt-1">GPA: 8.5</p>
           </div>
         </motion.div>
       ),
@@ -553,15 +602,24 @@ continuing to learn, innovate and grow in a collaborative environment.
         ))}
 
         {/* Footer */}
-        <motion.footer className="text-center pt-12 pb-20 sm:pb-24 md:pb-28" variants={sectionVariants}>
-          <motion.div
-            className="w-8 h-1 bg-[var(--brand-light-footer-pill)] dark:bg-[var(--brand-dark-footer-pill)] rounded-full mx-auto mb-3"
-            variants={itemVariants}
-          />
-          <motion.p className="text-sm text-muted-foreground" variants={itemVariants}>
-            &copy; {new Date().getFullYear()} Dhruv Jain. All rights reserved.
-          </motion.p>
-        </motion.footer>
+        <motion.footer
+  className="text-center pt-12 pb-20 sm:pb-24 md:pb-28"
+  variants={sectionVariants}
+>
+  <motion.div
+    className="w-8 h-1 bg-[var(--brand-light-footer-pill)] dark:bg-[var(--brand-dark-footer-pill)] rounded-full mx-auto mb-3"
+    variants={itemVariants}
+  />
+
+  <motion.p
+    className="text-sm text-muted-foreground text-center leading-relaxed"
+    variants={itemVariants}
+  >
+    &copy; {new Date().getFullYear()} Dhruv Jain. All rights reserved.
+    <br />
+    Designed, built, and maintained with ❤️ using Next.js, React, Tailwind CSS, and modern web technologies.
+  </motion.p>
+</motion.footer>
       </motion.main>
       <PortfolioFloatingDock />
     </div>
