@@ -66,7 +66,7 @@ interface ProjectItem {
 const projects: ProjectItem[] = [
   {
     name: "JobMate AI - A Job Portal ",
-    link: "https://github.com/dhruvjain2004/NaukriVerse",
+    link: "https://github.com/dhruvjain2004",
     description: [
       "◦ Developing a full-stack job portal where recruiters post jobs and users apply, manage profiles, and track applications.",
       "◦ Implemented JWT-based authentication with role-based access control for recruiters and job seekers.",
