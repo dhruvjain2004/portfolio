@@ -175,7 +175,7 @@ export default function ResumePage() {
             <div className="space-y-4">
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-white">
-                  NaukriVerse – Full-Stack Job Portal
+                  JobMate AI – Full-Stack Job Portal
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   MERN-based job portal with role-based authentication (User, Recruiter, Admin),
