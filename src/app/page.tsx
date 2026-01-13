@@ -15,6 +15,7 @@ import {
   Send,
   Building2,
   Award,
+  X,
 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -22,7 +23,7 @@ import { PortfolioFloatingDock } from "@/components/portfolio-floating-dock"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { motion, Variants } from "framer-motion"
-import { useState, FormEvent } from "react"
+import { useState, FormEvent, useEffect } from "react"
 
 interface ExperienceItem {
   role: string
@@ -34,7 +35,7 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Software Engineering Intern",
+    role: "SDE Intern",
     company: "Magnifier Solutions",
     period: "Aug 2025 - Oct 2025",
     description: [
@@ -65,18 +66,28 @@ interface ProjectItem {
 
 const projects: ProjectItem[] = [
   {
-    name: "JobMate AI - A Job Portal ",
+    name: "JobMateAI - FullStack Job Portal",
     link: "https://github.com/dhruvjain2004",
     description: [
-      "◦ Developing a full-stack job portal where recruiters post jobs and users apply, manage profiles, and track applications.",
-      "◦ Implemented JWT-based authentication with role-based access control for recruiters and job seekers.",
-      "◦ Integrated Cloudinary for secure upload and management of resumes, company logos, and media assets.",
-      "◦ Designed a responsive UI using ShadCN UI and Tailwind CSS; backend built with scalable REST APIs and MongoDB.",
+      "Developed a full-stack job portal using the MERN stack with separate User, Recruiter, and Admin authentication, implementing a custom JWT-based login system with Email/Password, Google OAuth and Email OTP verification.",
+      "Built complete job seeker and recruiter workflows, including profile management, resume uploads, job posting and editing, job visibility control and end-to-end application tracking.",
+      "Integrated Cloudinary for secure file storage (resumes, profile photos, company logos) and Sentry for real-time error monitoring and performance insights.",
+      "Designed a modular Node.js + Express + MongoDB backend with scalability in mind, enabling future AI features such as job matching, ATS resume analysis, NLP-based job search, recruiter analytics and an AI career assistant.",
     ],
-    techStack: ["MERN", "Tailwind CSS", "JWT", "Bcrypt", "MongoDB Atlas", "RESTful APIs", "ShadCN-UI", "Cloudinary"],
-    // logo and alt can be added if desired
-    logo: "💼", // Briefcase emoji
-    alt: "NaukriVerse Project Logo",
+    techStack: [
+      "MERN",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "React.js",
+      "Tailwind CSS",
+      "JWT",
+      "Google OAuth",
+      "Cloudinary",
+      "Sentry",
+    ],
+    logo: "💼",
+    alt: "JobMateAI FullStack Job Portal",
   },
   {
     name: "LangifyAI – AI Translation Platform",
@@ -96,6 +107,18 @@ const projects: ProjectItem[] = [
     ],
     logo: "🌐",
     alt: "LangifyAI Translation Platform",
+  },
+  {
+    name: "Talkegle – RealTime Chat Platform",
+    link: "https://github.com/dhruvjain2004",
+    description: [
+      "Engineered a real-time anonymous video chat application using Next.js and Socket.io, enabling instant user pairing, room-based signaling and low-latency communication.",
+      "Integrated WebRTC via ZEGOCloud to deliver stable video calling with responsive UI and cross-device compatibility.",
+      "Deployed and monitored a production-ready Node.js socket server with environment-based configuration and fault-tolerant startup handling.",
+    ],
+    techStack: ["Next.js", "TypeScript", "Socket.io", "ZEGOCloud", "WebRTC", "Tailwind CSS", "Node.js"],
+    logo: "🎥",
+    alt: "Talkegle RealTime Chat Platform",
   },
   {
     name: "StockTradeX Trading App",
@@ -129,6 +152,41 @@ const projects: ProjectItem[] = [
     techStack: ["React.js", "Node.js", "Socket.io"],
     logo: "💬", // Chat bubble emoji
     alt: "Chat App Project Logo",
+  },
+]
+
+interface DesignItem {
+  name: string
+  image: string
+  description: string
+  link?: string
+  tags?: string[]
+}
+
+const designs: DesignItem[] = [
+  {
+    name: "FinDash UI Kit",
+    image:
+      "https://cdn.dribbble.com/users/2400290/screenshots/16670052/media/4b8f3a2a5d1a4d0a0b3f8f6a9a1f2a8a.png",
+    description: "A finance dashboard concept with clean charts and modular components.",
+    link: "https://dribbble.com/",
+    tags: ["UI", "Dashboard", "Figma"],
+  },
+  {
+    name: "Chat UI Exploration",
+    image:
+      "https://cdn.dribbble.com/userupload/4038152/file/original-9b6b3a4f5c2f9a1e8f1b8d4c6e7a2b3c.png",
+    description: "Conversational UI prototypes for messaging flows and reactions.",
+    link: "https://dribbble.com/",
+    tags: ["Chat", "Interaction", "Figma"],
+  },
+  {
+    name: "Mobile App Onboarding",
+    image:
+      "https://cdn.dribbble.com/users/2400290/screenshots/15593675/media/8f7c6b2a3e4d5c1b2a9f0e6d7c8b9a0f.png",
+    description: "Onboarding screens with motion ideas and progressive disclosure.",
+    link: "https://dribbble.com/",
+    tags: ["Mobile", "Onboarding", "Motion"],
   },
 ]
 
@@ -265,6 +323,29 @@ const badgeVariants: Variants = {
 
 export default function PortfolioPage() {
   const [email, setEmail] = useState("")
+  const [projectSearch, setProjectSearch] = useState("")
+  const [selectedTech, setSelectedTech] = useState<string>("All")
+  const [isDesignModalOpen, setIsDesignModalOpen] = useState(false)
+  const [activeDesign, setActiveDesign] = useState<any | null>(null)
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsDesignModalOpen(false)
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [])
+
+  const allTechs = Array.from(new Set(projects.flatMap((p) => p.techStack))).sort()
+  const filteredProjects = projects.filter((p) => {
+    const matchesTech = selectedTech === "All" || p.techStack.includes(selectedTech)
+    const query = projectSearch.trim().toLowerCase()
+    const matchesQuery =
+      !query ||
+      p.name.toLowerCase().includes(query) ||
+      p.description.join(" ").toLowerCase().includes(query)
+    return matchesTech && matchesQuery
+  })
 
   const handleNewsletterSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -337,8 +418,38 @@ continuing to learn, innovate and grow in a collaborative environment.
       title: "Cool Projects I Worked On",
       icon: <Settings2 size={24} />,
       content: (
-        <div className="space-y-10">
-          {projects.map((project) => (
+        <div className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex-1">
+              <Input
+                placeholder="Search projects by name or description..."
+                value={projectSearch}
+                onChange={(e) => setProjectSearch(e.target.value)}
+                className="w-full"
+              />
+            </div>
+            <div className="flex items-center gap-2 flex-wrap">
+              <Badge
+                variant={selectedTech === "All" ? "secondary" : "outline"}
+                className="cursor-pointer"
+                onClick={() => setSelectedTech("All")}
+              >
+                All
+              </Badge>
+              {allTechs.map((tech) => (
+                <Badge
+                  key={tech}
+                  variant={selectedTech === tech ? "secondary" : "outline"}
+                  className="cursor-pointer"
+                  onClick={() => setSelectedTech(tech)}
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div className="text-sm text-muted-foreground">{filteredProjects.length} project(s) found</div>
+          {filteredProjects.map((project) => (
             <motion.div
               key={project.name}
               className="flex flex-col sm:flex-row items-start gap-4"
